@@ -1,1 +1,20 @@
-{}
+{:deps
+ {com.stuartsierra/component {:mvn/version "0.4.0"}} ; Because flc-x.component.
+ :aliases 
+ {:dev
+  {:extra-paths ["dev"]
+   :extra-deps 
+   {expectations/clojure-test {:mvn/version "1.1.1"}
+    com.stuartsierra/component {:mvn/version "0.4.0"} ; Because flc-x.component.
+    prismatic/plumbing {:mvn/version "0.5.5"}
+    integrant {:mvn/version "0.7.0"}
+    org.clojure/java.jdbc {:mvn/version "0.7.9"}
+    com.h2database/h2 {:mvn/version "1.4.199"}}}
+  :benchmark
+  {:extra-paths ["benchmark"]
+   :extra-deps 
+   {prismatic/plumbing {:mvn/version "0.5.5"}
+    criterium {:mvn/version "0.4.4"}}}}}
+ 
+
+ 
